@@ -56,20 +56,32 @@
             <style>
             /* 动态渐变效果 */
             .highlight-title {
-              background: linear-gradient(45deg, #ffa600 0%, #003f5c 100%);
+              background: linear-gradient(
+                45deg,
+                #003f5c 0%,
+                #374c80 12.5%,
+                #7a5195 25%,
+                #bc5090 37.5%,
+                #ef5675 50%,
+                #f97170 62.5%,
+                #ff7c43 75%,
+                #ffa600 87.5%
+              );
+              background-size: 400% 400%;
               -webkit-background-clip: text;
               background-clip: text;
               color: transparent;
               font-style: italic;
-              animation: gradientShift 3s ease infinite;
+              animation: gradientShift 12s ease infinite;
               text-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
-            
+
             @keyframes gradientShift {
               0% { background-position: 0% 50%; }
               50% { background-position: 100% 50%; }
               100% { background-position: 0% 50%; }
             }
+            
             @media (prefers-reduced-motion: reduce) {
               .highlight-title {
                 animation: none;
@@ -242,7 +254,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 elegant-title"> class="title is-3">Loss Landscape Convexity</h2>
+    <h2 class="title is-3 elegant-title">Loss Landscape Convexity</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
@@ -255,7 +267,7 @@
       </div>
     </div>
 
-    <h2 class="title is-3 elegant-title"> class="title is-3">Generalization of the Step Law</h2>
+    <h2 class="title is-3 elegant-title">Generalization of the Step Law</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
@@ -293,7 +305,7 @@
       </div>
     </div>
 
-    <h2 class="title is-3 elegant-title"> class="title is-3">Experimental Details</h2>
+    <h2 class="title is-3 elegant-title">Experimental Details</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
