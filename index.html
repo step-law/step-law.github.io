@@ -154,20 +154,17 @@
 
 <!-- 工具 -->
 <section class="section">
-  <div class="tool-embed-container">
-    <div class="tool-loading" id="toolLoader">
-      <div class="loading-text has-text-grey">
-        <span class="icon is-medium">
-          <i class="fas fa-spinner fa-pulse"></i>
-        </span>
-        <span>Loading Optimization Tool...</span>
+  <div class="container is-max-desktop">
+    <div class="tool-container">
+      <div class="tool-loading" id="toolLoader">
+        <div class="loading-spinner"></div>
       </div>
+      <iframe src="tool.html" 
+              class="tool-iframe"
+              loading="lazy"
+              title="Hyperparameter Optimization Tool"
+              onload="document.getElementById('toolLoader').style.display='none'"></iframe>
     </div>
-    <iframe src="tool.html" 
-            class="tool-iframe"
-            loading="lazy"
-            title="Hyperparameter Optimization Tool"
-            onload="document.getElementById('toolLoader').style.display='none'"></iframe>
   </div>
 </section>
 

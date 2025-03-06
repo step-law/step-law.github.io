@@ -76,15 +76,3 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
-
-
-// 添加加载失败处理
-document.querySelector('.tool-iframe').addEventListener('error', () => {
-  const loader = document.getElementById('toolLoader');
-  loader.innerHTML = `
-    <div class="has-text-danger">
-      <span class="icon"><i class="fas fa-exclamation-triangle"></i></span>
-      Failed to load tool. Please try refreshing.
-    </div>
-  `;
-});
