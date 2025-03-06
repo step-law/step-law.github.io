@@ -295,3 +295,17 @@ body {
 .tile.is-child .content {
   flex-grow: 1;
 }
+
+
+.abstract-box {
+  border-radius: 12px; /* 圆角半径 */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06); /* 柔和阴影 */
+  border: 1px solid rgba(0,0,0,0.08); /* 细边框 */
+  transition: transform 0.2s ease; /* 悬浮动效 */
+}
+
+/* 悬浮交互效果 */
+.abstract-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
