@@ -152,20 +152,22 @@
   </div>
 </section>
 
-<!-- 工具 -->
+
+
+
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="tool-container">
-      <div class="tool-loading" id="toolLoader">
-        <div class="lds-ring">
-          <div></div><div></div><div></div><div></div>
-        </div>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img1.png" alt="img1">
+          <figcaption class="mt-2 has-text-grey">
+            The hyperparameter space for models with 400M parameters trained on 40B tokens (left) and 1B parameters 
+            trained on 100B tokens (right). Optimal points represent the lowest training loss for each learning rate and 
+            batch size pair, while contour lines depict the relative loss differences from these optima.
+          </figcaption>
+        </figure>
       </div>
-      <iframe src="tool.html" 
-              class="tool-iframe"
-              loading="lazy"
-              title="Hyperparameter Optimization Tool"
-              onload="document.getElementById('toolLoader').style.display='none'"></iframe>
     </div>
   </div>
 </section>
@@ -306,40 +308,25 @@
   </div>
 </section>
 
-<section class="section">
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+
+<!-- 工具 -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="tool-container">
+      <div class="tool-loading" id="toolLoader">
+        <div class="lds-ring">
+          <div></div><div></div><div></div><div></div>
         </div>
       </div>
+      <iframe src="tool.html" 
+              class="tool-iframe"
+              loading="lazy"
+              title="Hyperparameter Optimization Tool"
+              onload="document.getElementById('toolLoader').style.display='none'"></iframe>
     </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
-
-
-
-
 
 
 
