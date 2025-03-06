@@ -218,7 +218,7 @@
     <div class="abstract-box has-background-white-bis p-6">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3 elegant-title">Abstract</h2>
           <div class="content has-text-justified">
             <p>
               The impressive capabilities of Large Language Models (LLMs) across diverse tasks are now well-established, yet their effective deployment necessitates careful hyperparameter optimization.
@@ -256,8 +256,8 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img2.png" alt="img2">
-          <figcaption class="mt-2 has-text-grey">
-            <b>Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens):</b> 
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens):</strong> 
             Scatter Plots and 3D Surface Visualizations of Hyperparameter Sensitivity.
           </figcaption>
         </figure>
@@ -280,8 +280,8 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img4.png" alt="img4">
-          <figcaption class="mt-2 has-text-grey">
-            <b>Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</b>
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</strong>
             Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
             Right: Reduced model depth D=8.0B at medium sparsity. 
             Our method consistently approximates global minima across sparsity regimes.
@@ -294,8 +294,8 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img5.png" alt="img5">
-          <figcaption class="mt-2 has-text-grey">
-            <b>Configuration Space Analysis under Different Data Recipes.</b>
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Configuration Space Analysis under Different Data Recipes.</strong>
             Our method demonstrates stable convergence patterns across varying data compositions.
           </figcaption>
         </figure>
@@ -307,16 +307,16 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img6.png" alt="img6">
-          <figcaption class="mt-2 has-text-grey">
-            <b>Comparison of learning rate schedules.</b> These contour
-            plots illustrate two distinct learning rate schedules. <b>Blue
-            contours</b> represent the <i>conventional decay schedule</i>, where the
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Comparison of learning rate schedules.</strong> These contour
+            plots illustrate two distinct learning rate schedules. <strong style="font-weight: 900; color: #000;">Blue
+            contours</strong> represent the <i>conventional decay schedule</i>, where the
             minimum learning rate min_lr is set to one-tenth of the maximum
-            learning rate <span>$\frac{\max\_lr}{10}$</span>. <b>Red contours</b> depict our
+            learning rate <span>$\frac{\max\_lr}{10}$</span>. <strong style="font-weight: 900; color: #000;">Red contours</strong> depict our
             proposed <i>final learning rate schedule</i>, with a constant
             minimum learning rate of <span>$\min\_lr = 10^{-5}$</span>. The visualization reveals
-            that the conventional decay method leads to a discernible <b>leftward
-            bias</b> in the optimal learning rate range, indicated by the shift of the lowest
+            that the conventional decay method leads to a discernible <strong style="font-weight: 900; color: #000;">leftward
+            bias</strong> in the optimal learning rate range, indicated by the shift of the lowest
             loss region towards lower learning rates in the blue contours compared to
             the red.
           </figcaption>
@@ -329,9 +329,11 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img7.png" alt="img7">
-          <figcaption class="mt-2 has-text-grey">
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">
             <p>(a) Scatter points indicate empirical optimal learning rate vs. batch size for model scale N;</p>
             <p>(b) Analogous results for dataset scale D.</p>
+            </strong>
             Curves show our hp-scaling law predictions, with shaded regions representing parameter uncertainty bounds from the sampling-based fitting strategy.
             Both plots use double logarithmic scaling (1912 training samples).
           </figcaption>
