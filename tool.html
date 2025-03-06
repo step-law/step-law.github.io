@@ -9,8 +9,8 @@
 <body>
     <div class="tab-container">
         <nav class="tab-nav">
-            <button class="tab-button active" data-tab="tab1">N,D->BS,LR</button>
-            <button class="tab-button" data-tab="tab2">Heatmap</button>
+            <button class="tab-button active" data-tab="tab1">Hyperparameter Law</button>
+            <button class="tab-button" data-tab="tab2">Loss Heatmap</button>
             <!-- <button class="tab-button" data-tab="tab3">tab3</button> -->
         </nav>
 
@@ -19,11 +19,11 @@
                 <!-- <h2>Title1</h2> -->
                 <form id="modelForm">
                     <div>
-                        <label for="modelSize">Model Size</label>
+                        <label for="modelSize">N(Model Size)</label>
                         <input type="number" id="modelSize" placeholder="e.g.1000000 or 1e6" required>
                     </div>
                     <div>
-                        <label for="trainingTokens">Training Tokens</label>
+                        <label for="trainingTokens">D(Training Tokens)</label>
                         <input type="number" id="trainingTokens" placeholder="e.g.5000000 or 5e6" required>
                     </div>
                     <button type="submit">Calculate</button>
@@ -41,22 +41,22 @@
                 <div class="configurator">
                     <div class="selector-group" id="selectorGroup">
                         <div class="select-item">
-                            <label>Model Type</label>
+                            <label>Sparsity</label>
                             <select id="modelType" class="styled-select">
                                 <option value="Moe">Moe</option>
                                 <option value="Dense">Dense</option>
                             </select>
                         </div>
                         <div class="select-item">
-                            <label>N</label>
+                            <label>N(Model Size)</label>
                             <select id="nValue" class="styled-select"></select>
                         </div>
                         <div class="select-item" id="naItem" style="display: none;">
-                            <label>Na</label>
+                            <label>Na(Activate Parameters)</label>
                             <select id="naValue" class="styled-select"></select>
                         </div>
                         <div class="select-item">
-                            <label>D</label>
+                            <label>D(Training Tokens)</label>
                             <select id="dValue" class="styled-select"></select>
                         </div>
                     </div>
