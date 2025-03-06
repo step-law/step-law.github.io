@@ -186,7 +186,7 @@ function initVisualization() {
       const img = document.createElement('img');
       img.className = 'generated-image';
       img.src = imagePath;
-      img.alt = `参数组合可视化: ${fileName}`;
+      img.alt = `Parameters: ${fileName}`;
     
       // 添加响应式样式
       img.style.maxWidth = '100%';
@@ -202,8 +202,8 @@ function initVisualization() {
         <div class="error-message">
           <span class="icon">⚠️</span>
           <div>
-            <p>无法加载可视化图表</p>
-            <small>请检查参数组合：${fileName}</small>
+            <p>Failed</p>
+            <small>Please check the parameters：${fileName}</small>
           </div>
         </div>
       `;
@@ -213,7 +213,7 @@ function initVisualization() {
       loading.className = 'image-loading';
       loading.innerHTML = `
         <div class="loading-spinner"></div>
-        <p>正在生成可视化图表...</p>
+        <p>Loading...</p>
       `;
   
       // 容器布局
@@ -353,7 +353,7 @@ function initVisualization() {
     
       // 输入验证
       if (!isValidFormat(modelSizeInput) || !isValidFormat(trainingTokensInput)) {
-        showError("格式错误：支持示例 1e8, 250000, 3.5×10^6");
+        showError("Format error, Supporting examples: 1e8, 250000, 3.5×10^6");
         return;
       } 
     
@@ -361,7 +361,7 @@ function initVisualization() {
       const trainingTokens = parseNumber(trainingTokensInput);
     
       if (isNaN(modelSize) || isNaN(trainingTokens) || modelSize <= 0 || trainingTokens <= 0) {
-        showError("请输入有效的正数");
+        showError("Please Input Positive Numbers");
         return;
       }
     
@@ -413,7 +413,7 @@ function initVisualization() {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `<div class="error">⚠️ ${message}</div>`;
     setTimeout(() => {
-        resultDiv.innerHTML = `<h3>计算结果</h3>
+        resultDiv.innerHTML = `<h3>Results</h3>
             <p id="bsValue">BS: -</p>
             <p id="lrValue">LR: -</p>`;
     }, 2000);
