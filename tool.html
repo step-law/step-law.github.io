@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictable Scale</title>
+    <link rel="stylesheet" href="./static/css/toolstyle.css">
+</head>
+<body>
+    <div class="tab-container">
+        <nav class="tab-nav">
+            <button class="tab-button active" data-tab="tab1">tab1</button>
+            <button class="tab-button" data-tab="tab2">tab2</button>
+            <!-- <button class="tab-button" data-tab="tab3">tab3</button> -->
+        </nav>
+
+        <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+                <h2>Title1</h2>
+                <form id="modelForm">
+                    <div>
+                        <label for="modelSize">Model Size</label>
+                        <input type="number" id="modelSize" placeholder="例如：1000000或1e6" required>
+                    </div>
+                    <div>
+                        <label for="trainingTokens">Training Tokens</label>
+                        <input type="number" id="trainingTokens" placeholder="例如：5000000或5e6" required>
+                    </div>
+                    <button type="submit">Calculate</button>
+                </form>
+
+                <div id="result">
+                    <h3>Results</h3>
+                    <p id="bsValue">BS: -</p>
+                    <p id="lrValue">LR: -</p>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-pane">
+                <h2>Title2</h2>
+                <div class="configurator">
+                    <div class="selector-group" id="selectorGroup">
+                        <div class="select-item">
+                            <label>Model Type</label>
+                            <select id="modelType" class="styled-select">
+                                <option value="Moe">Moe</option>
+                                <option value="Dense">Dense</option>
+                            </select>
+                        </div>
+                        <div class="select-item">
+                            <label>N</label>
+                            <select id="nValue" class="styled-select"></select>
+                        </div>
+                        <div class="select-item" id="naItem" style="display: none;">
+                            <label>Na</label>
+                            <select id="naValue" class="styled-select"></select>
+                        </div>
+                        <div class="select-item">
+                            <label>D</label>
+                            <select id="dValue" class="styled-select"></select>
+                        </div>
+                    </div>
+                    <button id="generateBtn" class="visualize-btn">Generate</button>
+                    <div id="visualization" class="visualization-container">
+                        <div class="placeholder-graph">请先选择参数并点击生成按钮</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="tab3" class="tab-pane">
+                <h2>Title3</h2>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="./static/js/tool.js"></script>
+</body>
+</html>
