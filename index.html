@@ -23,6 +23,17 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$', right: '$', display: false}
+      ]
+    });
+  });
+</script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -269,7 +280,8 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img3.png" alt="img3">
-          <figcaption class="mt-2" style="color: #333">Topological Invariance Across Varied Model Shape.</strong>
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Topological Invariance Across Varied Model Shape.</strong>
           </figcaption>
         </figure>
       </div>
