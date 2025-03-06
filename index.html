@@ -182,8 +182,8 @@
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img1.png" alt="img1">
           <figcaption class="mt-2 has-text-grey">
-            The hyperparameter space for models with 400M parameters trained on 40B tokens (left) and 1B parameters 
-            trained on 100B tokens (right). Optimal points represent the lowest training loss for each learning rate and 
+            <b>The hyperparameter space for models with 400M parameters trained on 40B tokens (left) and 1B parameters 
+            trained on 100B tokens (right).</b> Optimal points represent the lowest training loss for each learning rate and 
             batch size pair, while contour lines depict the relative loss differences from these optima.
           </figcaption>
         </figure>
@@ -240,25 +240,27 @@
 
 
 <section class="section">
+  <h2 class="title is-3">Loss Landscape Convexity with LR and BS</h2>
   <div class="container is-max-desktop">
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img2.png" alt="img2">
           <figcaption class="mt-2 has-text-grey">
-            Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens): 
+            <b>Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens):</b> 
             Scatter Plots and 3D Surface Visualizations of Hyperparameter Sensitivity.
           </figcaption>
         </figure>
       </div>
     </div>
 
+    <h2 class="title is-3">Generalization of the Step Law</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img3.png" alt="img3">
           <figcaption class="mt-2 has-text-grey">
-            Topological Invariance Across Varied Model Shape.
+            <b>Topological Invariance Across Varied Model Shape.</b>
           </figcaption>
         </figure>
       </div>
@@ -269,7 +271,7 @@
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img4.png" alt="img4">
           <figcaption class="mt-2 has-text-grey">
-            Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.
+            <b>Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</b>
             Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
             Right: Reduced model depth D=8.0B at medium sparsity. 
             Our method consistently approximates global minima across sparsity regimes.
@@ -283,19 +285,20 @@
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img5.png" alt="img5">
           <figcaption class="mt-2 has-text-grey">
-            <b>Configuration Space Analysis under Different Data Recipes</b>.
+            <b>Configuration Space Analysis under Different Data Recipes.</b>
             Our method demonstrates stable convergence patterns across varying data compositions.
           </figcaption>
         </figure>
       </div>
     </div>
 
+    <h2 class="title is-3">Experimental Details</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
         <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
           <img src="./static/images/img6.png" alt="img6">
           <figcaption class="mt-2 has-text-grey">
-            <b>Comparison of learning rate schedules</b>. These contour
+            <b>Comparison of learning rate schedules.</b> These contour
             plots illustrate two distinct learning rate schedules. <b>Blue
             contours</b> represent the <i>conventional decay schedule</i>, where the
             minimum learning rate min_lr is set to one-tenth of the maximum
