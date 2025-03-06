@@ -220,30 +220,67 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
-        <img src="./static/images/img3.png" alt="img3">
-        <figcaption class="mt-2 has-text-grey">
-          Topological Invariance Across Varied Model Shape
-        </figcaption>
-      </figure>
+      <div class="column is-full-width"></div>
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img2.png" alt="img2">
+          <figcaption class="mt-2 has-text-grey">
+            Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens): 
+            Scatter Plots and 3D Surface Visualizations of Hyperparameter Sensitivity.
+          </figcaption>
+        </figure>
 
-      <div class="column is-full-width">
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img3.png" alt="img3">
+          <figcaption class="mt-2 has-text-grey">
+            Topological Invariance Across Varied Model Shape.
+          </figcaption>
+        </figure>
 
-        <!-- 第二行图块 -->
-        <div class="tile is-ancestor mt-6">
-          <div class="tile is-parent">
-            <!-- 图块3 -->
-            <div class="tile is-child box has-background-light">
-              <figure class="image is-3by2">
-                <img src="./static/images/img3.png" alt="示例图3" class="has-rounded-border">
-              </figure>
-              <div class="content mt-4">
-                <p class="has-text-grey">Topological Invariance Across Varied Model Shape</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img4.png" alt="img4">
+          <figcaption class="mt-2 has-text-grey">
+            Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.
+            Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
+            Right: Reduced model depth D=8.0B at medium sparsity. 
+            Our method consistently approximates global minima across sparsity regimes.
+          </figcaption>
+        </figure>
+      
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img5.png" alt="img5">
+          <figcaption class="mt-2 has-text-grey">
+            <b>Configuration Space Analysis under Different Data Recipes</b>.
+            Our method demonstrates stable convergence patterns across varying data compositions.
+          </figcaption>
+        </figure>
 
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img6.png" alt="img6">
+          <figcaption class="mt-2 has-text-grey">
+            <b>Comparison of learning rate schedules</b>. These contour
+            plots illustrate two distinct learning rate schedules. <b>Blue
+            contours</b> represent the \textit{conventional decay schedule}, where the
+            minimum learning rate ($\min\_lr$) is set to one-tenth of the maximum
+            learning rate ($\frac{\max\_lr}{10}$). \textbf{Red contours} depict our
+            proposed \textit{fixed final learning rate schedule}, with a constant
+            minimum learning rate of $\min\_lr = 10^{-5}$. The visualization reveals
+            that the conventional decay method leads to a discernible \textbf{leftward
+            bias} in the optimal learning rate range, indicated by the shift of the lowest
+            loss region towards lower learning rates in the blue contours compared to
+            the red.
+          </figcaption>
+        </figure>
+
+        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+          <img src="./static/images/img7.png" alt="img7">
+          <figcaption class="mt-2 has-text-grey">
+            <p>(a) Scatter points indicate empirical optimal learning rate vs. batch size for model scale N;</p>
+            <p>(b) Analogous results for dataset scale D.</p>
+            Curves show our hp-scaling law predictions, with shaded regions representing parameter uncertainty bounds from the sampling-based fitting strategy.
+            Both plots use double logarithmic scaling (1912 training samples).
+          </figcaption>
+        </figure>
+        
       </div>
     </div>
   </div>
