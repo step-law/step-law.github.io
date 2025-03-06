@@ -329,3 +329,7 @@ body {
   height: 2px;
   background: #e74c3c;
 }
+
+.author-name {
+  color: var(--link-color, #0066cc); /* 使用CSS变量 */
+}
