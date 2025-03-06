@@ -175,13 +175,13 @@ function initTabs() {
         // 生成文件名（根据实际文件命名规则调整）
         let fileName;
         if (modelType === 'Dense') {
-          fileName = `heatmap_N${nValue}_D${dValue}.png`;
+          fileName = `heatmap_N${nValue}_D${dValue}.pdf`;
         } else {
           const naValue = document.getElementById('naValue').value;
-          fileName = `heatmap_N${nValue}_D${dValue}_Na${naValue}.png`;
+          fileName = `heatmap_N${nValue}_D${dValue}_Na${naValue}.pdf`;
         }
         // const fileName = `logo.png`
-        const pdfPath = `figures/${fileName}`;
+        const pdfPath = `./static/images/${fileName}`;
   
         // 创建PDF展示元素
         const embed = document.createElement('embed');
