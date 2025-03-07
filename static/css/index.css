@@ -78,46 +78,9 @@ body {
     text-decoration: underline;
 }
 
-.authors-container {
-  text-align: center; /* 让整体居中 */
-  margin-bottom: 2rem; /* 底部留空，可视情况增减 */
-}
-
-/* 让 publication-authors 布局横向并自动换行 */
-.publication-authors {
-  display: flex;
-  flex-wrap: wrap;        /* 自动换行 */
-  justify-content: center;/* 水平居中 */
-  gap: 1.5rem;           /* 作者块之间的水平/垂直间距 */
-  
-  /* 原先 is-size-5 的字号可能偏大，这里可自定义 */
-  font-size: 0.95rem;     /* 例如比默认稍小一些 */
-  line-height: 1.4;       /* 行高 */
-}
-
-/* 每个作者块的内部样式 */
 .author-block {
-  font-weight: 400;      /* 字体粗细，可调整 */
-  /* 如果希望作者名和单位更紧凑，可以视情况加 margin */
-  margin: 0;
+  display: inline-block;
 }
-
-/* 作者名字可以略微减小，或者在此基础上改变颜色 */
-.author-name {
-  /* 如果想要比 publication-authors 再小一点，可这样写：
-     font-size: 0.9em; 
-     但一般跟随父元素就行 */
-  color: var(--link-color, #0066cc);
-}
-
-/* 调整上标 (sup) 的大小、位置等 */
-.author-block sup {
-  font-size: 0.7em;
-  vertical-align: super; /* 默认即可，可微调例如 baseline */
-}
-
-/* 如果想让名字更突出、sup 更小更靠上，可以在这里再调 */
-
 
 .publication-banner img {
 }
@@ -365,4 +328,8 @@ body {
   width: 50px;
   height: 2px;
   background: #e74c3c;
+}
+
+.author-name {
+  color: var(--link-color, #0066cc); /* 使用CSS变量 */
 }
