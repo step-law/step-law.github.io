@@ -138,7 +138,7 @@
               <span class="author-name">Daxin Jiang</span><sup style="font-size: 0.6rem;">1</sup>
             </span>
           </div>
-          <div class="institutional-affiliations" style="text-align: center; margin-top: 0.25rem; padding-top: 0.5rem; font-size: 0.9rem;">
+          <div class="institutional-affiliations" style="text-align: center; margin-top: 0.25rem; font-size: 0.9rem;">
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">1</sup>StepFun</span>
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">2</sup>Fudan University</span>
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">3</sup>Tsinghua University</span>
@@ -256,59 +256,63 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-      <div class="formula-container">
-        <div class="math-display">
-        $$
-            \begin{aligned}
-            \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
-            B(D)       & = 0.58D^{0.571}         
-            \end{aligned}
-        $$
-        </div>
-        <div class="formula-caption">
-          <p class="caption-text">
-            <span class="highlight-term">Step Law</span> demonstrates that the optimal 
-            batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
-            on dataset size <span class="math-term">D</span>, while the optimal learning rate 
-            <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
-            model parameters <span class="math-term">N</span> and dataset size 
-            <span class="math-term">D</span>.
-          </p>
-        </div>
+    <!-- 文字描述部分 -->
+    <div class="formula-caption">
+      <p class="caption-text">
+        <span class="highlight-term">Step Law</span> demonstrates that the optimal 
+        batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
+        on dataset size <span class="math-term">D</span>, while the optimal learning rate 
+        <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
+        model parameters <span class="math-term">N</span> and dataset size 
+        <span class="math-term">D</span>.
+      </p>
+    </div>
+
+    <!-- 公式区块 -->
+    <div class="formula-container">
+      <div class="math-display">
+      $$
+        \begin{aligned}
+        \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
+        B(D)       & = 0.58D^{0.571}       
+        \end{aligned}
+      $$
       </div>
+    </div>
   </div>
 </section>
 
 <style>
+/* 公式容器样式 */
 .formula-container {
   background: #f8f9fa;
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin: 2rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* 数学公式显示 */
 .math-display {
   text-align: center;
-  margin-bottom: 1.2rem;
+  padding: 1rem;
 }
 
-.math-display .katex {
-  font-size: 1.2rem;
-  padding: 0.8rem 1.2rem;
-  display: inline-block;
+.katex {
+  font-size: 1.1rem !important;
+  color: #2d3748;
 }
 
+/* 文字描述样式 */
 .formula-caption {
-  border-left: 3px solid #4a90e2;
-  padding-left: 1rem;
+  margin: 2rem 0;
+  padding: 0 1rem;
 }
 
 .caption-text {
   color: #4a5568;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
+  line-height: 1.8;
+  font-size: 1rem;
 }
 
 .highlight-term {
@@ -317,9 +321,10 @@
 }
 
 .math-term {
-  font-family: "KaTeX_Math", sans-serif;
+  font-family: "KaTeX_Math";
   color: #2d3748;
   font-style: italic;
+  padding: 0 0.2rem;
 }
 
 /* 加载 KaTeX 字体 */
