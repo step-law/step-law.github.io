@@ -208,14 +208,28 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
+    <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img1.png" alt="img1">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">The hyperparameter space for models with 400M parameters trained on 40B tokens (left) and 1B parameters 
             trained on 100B tokens (right).</strong> Optimal points represent the lowest training loss for each learning rate and 
             batch size pair, while contour lines depict the relative loss differences from these optima.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    
+    <div class="columns is-centered mb-6">
+      <div class="column is-full-width">
+        <figure class="image mb-5"> 
+          <img src="./static/images/table1.png" alt="table1">
+          <figcaption class="mt-2" style="color: #333">
+            <strong style="font-weight: 900; color: #000;">Comparison of optimal hyperparameter scaling laws across
+              different approaches. Data Recipe</strong> and <strong style="font-weight: 900; color: #000;">Model Sparsity</strong>
+              denotes whether the approach is suitable for different data recipe and model sparsity. 
+              <strong style="font-weight: 900; color: #000;">Relative Error</strong> denotes the relative loss.
           </figcaption>
         </figure>
       </div>
@@ -265,7 +279,7 @@
     <h2 class="title is-3 elegant-title">Loss Landscape Convexity</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img2.png" alt="img2">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens):</strong> 
@@ -278,7 +292,7 @@
     <h2 class="title is-3 elegant-title">Generalization of the Step Law</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img3.png" alt="img3">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">Topological Invariance Across Varied Model Shape.</strong>
@@ -289,7 +303,7 @@
 
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5">
           <img src="./static/images/img4.png" alt="img4">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</strong>
@@ -303,7 +317,7 @@
     
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img5.png" alt="img5">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">Configuration Space Analysis under Different Data Recipes.</strong>
@@ -316,7 +330,7 @@
     <h2 class="title is-3 elegant-title">Experimental Details</h2>
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img6.png" alt="img6">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">Comparison of learning rate schedules.</strong> These contour
@@ -338,7 +352,7 @@
 
     <div class="columns is-centered mb-6">
       <div class="column is-full-width">
-        <figure class="image mb-5"> <!-- mb-5 控制下边距 -->
+        <figure class="image mb-5"> 
           <img src="./static/images/img7.png" alt="img7">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">
