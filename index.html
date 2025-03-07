@@ -23,16 +23,15 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    renderMathInElement(document.body, {
-      delimiters: [
-        {left: '$', right: '$', display: false}
-      ]
-    });
-  });
-</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    .katex { font-size: 1.1em; }
+    .formula-box { padding: 1rem; background: #f8f9fa; }
+  </style>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -139,7 +138,7 @@
               <span class="author-name">Daxin Jiang</span><sup style="font-size: 0.6rem;">1</sup>
             </span>
           </div>
-          <div class="institutional-affiliations" style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+          <div class="institutional-affiliations" style="text-align: center; margin-top: 0.25rem; padding-top: 0.5rem; font-size: 0.9rem;">
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">1</sup>StepFun</span>
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">2</sup>Fudan University</span>
               <span style="margin-right: 1rem;"><sup style="font-size: 0.6rem;">3</sup>Tsinghua University</span>
@@ -255,27 +254,30 @@
   </div>
 </section>
 
-<div class="formula-container">
-  <div class="math-display">
-$$
-
-    \begin{aligned}
-    \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
-    B(D)       & = 0.58D^{0.571}         
-    \end{aligned}
-$$
+<section class="section">
+  <div class="container is-max-desktop">
+      <div class="formula-container">
+        <div class="math-display">
+        $$
+            \begin{aligned}
+            \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
+            B(D)       & = 0.58D^{0.571}         
+            \end{aligned}
+        $$
+        </div>
+        <div class="formula-caption">
+          <p class="caption-text">
+            <span class="highlight-term">Step Law</span> demonstrates that the optimal 
+            batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
+            on dataset size <span class="math-term">D</span>, while the optimal learning rate 
+            <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
+            model parameters <span class="math-term">N</span> and dataset size 
+            <span class="math-term">D</span>.
+          </p>
+        </div>
+      </div>
   </div>
-  <div class="formula-caption">
-    <p class="caption-text">
-      <span class="highlight-term">Step Law</span> demonstrates that the optimal 
-      batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
-      on dataset size <span class="math-term">D</span>, while the optimal learning rate 
-      <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
-      model parameters <span class="math-term">N</span> and dataset size 
-      <span class="math-term">D</span>.
-    </p>
-  </div>
-</div>
+</section>
 
 <style>
 .formula-container {
@@ -514,6 +516,19 @@ $$
     </div>
   </div>
 </footer>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ],
+      throwOnError: false
+    });
+  });
+</script>
 
 </body>
 </html>
