@@ -16,6 +16,10 @@ body {
     margin-bottom: 5px;
 }  */
 
+.publication-links {
+  margin-top: 0.1rem;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
