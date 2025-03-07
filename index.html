@@ -260,11 +260,11 @@
     <div class="formula-caption">
       <p class="caption-text">
         <span class="highlight-term">Step Law</span> demonstrates that the optimal 
-        batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
-        on dataset size <span class="math-term">D</span>, while the optimal learning rate 
-        <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
-        model parameters <span class="math-term">N</span> and dataset size 
-        <span class="math-term">D</span>.
+        batch size <span class="math-inline">B(D)</span> exhibits a primary dependence 
+        on dataset size <span class="math-inline">D</span>, while the optimal learning rate 
+        <span class="math-inline">\eta(N, D)</span> manifests a joint dependence on both 
+        model parameters <span class="math-inline">N</span> and dataset size 
+        <span class="math-inline">D</span>.
       </p>
     </div>
 
@@ -274,7 +274,7 @@
       $$
         \begin{aligned}
         \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
-        B(D)       & = 0.58D^{0.571}       
+        B(D)       & = 0.58D^{0.571}     
         \end{aligned}
       $$
       </div>
@@ -285,11 +285,24 @@
 <style>
 /* 公式容器样式 */
 .formula-container {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(145deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 25px;
+  padding: 1.8rem 2.5rem;
+  margin: 2rem auto;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
+  border: 1px solid #90caf9;
+}
+
+/* 行内公式样式 */
+.math-inline {
+  font-family: "KaTeX_Math", sans-serif;
+  color: #1a237e;
+  font-style: italic;
+  padding: 0 0.3rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 /* 数学公式显示 */
@@ -299,32 +312,27 @@
 }
 
 .katex {
-  font-size: 1.1rem !important;
-  color: #2d3748;
+  font-size: 1.2rem !important;
+  color: #0d47a1;
 }
 
 /* 文字描述样式 */
 .formula-caption {
   margin: 2rem 0;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .caption-text {
-  color: #4a5568;
+  color: #37474f;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-family: 'Arial', sans-serif;
 }
 
 .highlight-term {
-  color: #2b6cb0;
-  font-weight: 600;
-}
-
-.math-term {
-  font-family: "KaTeX_Math";
-  color: #2d3748;
-  font-style: italic;
-  padding: 0 0.2rem;
+  color: #1565c0;
+  font-weight: 700;
+  letter-spacing: -0.3px;
 }
 
 /* 加载 KaTeX 字体 */
