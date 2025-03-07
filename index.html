@@ -222,6 +222,7 @@
   </div>
 </section>
 
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -253,6 +254,75 @@
     <!--/ Abstract. -->
   </div>
 </section>
+
+<div class="formula-container">
+  <div class="math-display">
+$$
+
+    \begin{aligned}
+    \eta(N, D) & = 1.79N^{-0.713}D^{0.307}  \\
+    B(D)       & = 0.58D^{0.571}         
+    \end{aligned}
+$$
+  </div>
+  <div class="formula-caption">
+    <p class="caption-text">
+      <span class="highlight-term">Step Law</span> demonstrates that the optimal 
+      batch size <span class="math-term">B(D)</span> exhibits a primary dependence 
+      on dataset size <span class="math-term">D</span>, while the optimal learning rate 
+      <span class="math-term">\eta(N, D)</span> manifests a joint dependence on both 
+      model parameters <span class="math-term">N</span> and dataset size 
+      <span class="math-term">D</span>.
+    </p>
+  </div>
+</div>
+
+<style>
+.formula-container {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.math-display {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.math-display .katex {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  display: inline-block;
+}
+
+.formula-caption {
+  border-left: 3px solid #4a90e2;
+  padding-left: 1rem;
+}
+
+.caption-text {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.highlight-term {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.math-term {
+  font-family: "KaTeX_Math", sans-serif;
+  color: #2d3748;
+  font-style: italic;
+}
+
+/* 加载 KaTeX 字体 */
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css');
+</style>
 
 
 <section class="section">
