@@ -8,6 +8,9 @@ body {
     color: #000;
 }
 
+.link-block {
+  margin: 0.5rem
+}
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -53,6 +56,8 @@ body {
 
 .publication-authors {
     font-family: 'Google Sans', sans-serif;
+    margin: 2rem 0;
+    font-size: 1.1rem;
 }
 
 .publication-venue {
@@ -80,6 +85,7 @@ body {
 
 .author-block {
   display: inline-block;
+  margin: 0 1rem;
 }
 
 .publication-banner img {
