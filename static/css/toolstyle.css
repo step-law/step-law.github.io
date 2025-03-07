@@ -182,18 +182,16 @@ button:hover {
 }
 
 #naItem {
-    display: block; /* 默认显示，通过JS控制 */
-    transition: all 0.3s ease;
-  }
-  
-#naItem[hidden] {
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+#naItem.hidden {
     display: none !important;
     opacity: 0;
     transform: scale(0.95);
-    height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
 }
 
 .select-item:hover {

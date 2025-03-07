@@ -125,26 +125,32 @@ function initTabs() {
     }
   
     function updateVisibility() {
-      const isMoe = modelType.value === 'Moe';
-      // 强制更新显示状态
-      naValue.parentElement.hidden = !isMoe; // 使用hidden属性替代style
-      naValue.parentElement.style.display = isMoe ? 'block' : 'none';
-      selectorGroup.classList.toggle('has-na', isMoe);
-    
-      // 强制重绘防止布局残留
-      selectorGroup.style.display = 'none';
-      selectorGroup.offsetHeight; // 触发回流
-      selectorGroup.style.display = 'grid';
+        const isMoe = modelType.value === 'Moe';
+        const naItem = document.getElementById('naItem');
+      
+        // 使用classList代替直接操作style
+        naItem.classList.toggle('hidden', !isMoe);
+      
+        // 同步网格布局
+        selectorGroup.classList.toggle('has-na', isMoe);
+      
+        // 添加强制布局更新逻辑
+        void selectorGroup.offsetHeight; // 触发回流确保布局更新
     }
   
     modelType.addEventListener('change', () => {
-      updateNOptions();
-      updateVisibility(); // 新增可见性同步
-      if (!isMoe) {
-        naValue.value = ''; // 清空残留值
-        dValue.innerHTML = ''; // 重置D选项
-      }
-      updateDOptions();
+        updateNOptions();
+        updateVisibility();
+        // 确保D选项在类型切换时重置
+        dValue.innerHTML = '';
+        // 强制布局更新
+        setTimeout(() => {
+            if (modelType.value === 'Moe') {
+                updateNaOptions();
+            } else {
+                updateDOptions();
+            }
+        }, 10); // 微延迟确保DOM更新完成
     });
     nValue.addEventListener('change', () => {
       modelType.value === 'Moe' ? updateNaOptions() : updateDOptions();
