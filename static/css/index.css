@@ -11,9 +11,13 @@ body {
 .link-block {
   margin: 0.5rem
 }
-.link-block a {
+/* .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+}  */
+
+.publication-links {
+  margin-top: 2rem;
 }
 
 .dnerf {
