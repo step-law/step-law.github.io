@@ -191,7 +191,7 @@
                 <a href="https://wandb.ai/billzid/predictable-scale"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-wave-square"></i>
+                      <i class="fas fa-chalkboard"></i>
                   </span>
                   <span>Wandb</span>
                 </a>
@@ -357,8 +357,18 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img2.png" alt="img2">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Learning Rate vs. Batch Size Loss Landscape Analysis for 1B Model (Trained on 100B Tokens):</strong> 
-            Scatter Plots and 3D Surface Visualizations of Hyperparameter Sensitivity.
+            <strong style="font-weight: 900; color: #000;">Figure 2. Learning Rate vs. Batch Size Loss Landscape Analysis 
+            for 1B Model (Trained on 100B Tokens) combining empirical scatter data (left) and reconstructed 3D surfaces (right):</strong> 
+
+            Each solid point represents the converged Train Smoothed Loss from 120 small models trained from scratch. 
+            To visualize the convexity, researchers constructed a 3D coordinate system (right) with the x-axis as Learning Rate, 
+            y-axis as Batch Size, and z-axis as Loss. Horizontal and vertical cross-sections of 
+            this 3D space reveal loss patterns: the upper-left subplot shows the final converged Train Smoothed Loss 
+            under fixed Learning Rates with varying Batch Sizes, while the lower-left subplot displays the loss under 
+            fixed Batch Sizes with varying Learning Rates. 
+            A pronounced convexity is observed with a relatively flat region at the bottom of the convex basin 
+            suggesting that the optimal combinations of Learning Rate and Batch Size likely occupy a broad range 
+            rather than a single sharp minimum.
           </figcaption>
         </figure>
       </div>
@@ -370,7 +380,16 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img3.png" alt="img3">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Topological Invariance Across Varied Model Shape.</strong>
+            <strong style="font-weight: 900; color: #000;">Figure3. Topological Invariance Across Varied Model Shape.</strong>
+            This figure demonstrates the topological invariance of optimal hyperparameters across 
+            different model shapes under fixed non-vocabulary parameter counts and training token budgets. 
+            Researchers systematically varied model architectures by adjusting layer counts (14/10/8 layers from left to right), 
+            hidden dimensions (1280/1536/2048), and six FFN multiples (FFN_media_dim/model_dim ranging from 1.1x to 6.25x). 
+            Red five-pointed stars denote predictions from the Step Law method, 
+            which consistently identifies near-global-minimum regions across all six model shapes. 
+            While the Step Law predictions remain stable, the positional shifts of the convex basin's bottom region 
+            across different architectures reveal shape-dependent variations in optimal hyperparameter configurations, 
+            despite preserved topological characteristics in the loss landscape.
           </figcaption>
         </figure>
       </div>
@@ -381,10 +400,20 @@
         <figure class="image mb-5">
           <img src="./static/images/img4.png" alt="img4">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</strong>
-            Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
+            <strong style="font-weight: 900; color: #000;">Figure 4. Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</strong>
+            <!-- Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
             Right: Medium sparsity at D=8.0B. 
             Our method consistently approximates global minima across sparsity regimes.
+             -->
+            The left panel shows low sparsity (NA/N = 0.27), the center illustrates
+            moderate sparsity ( N<sub>a</sub>/N = 0.58, D/N = 10), and the right depicts moderate sparsity
+            with reduced training tokens (N N<sub>a</sub>/N = 0.58, D/N = 4). Researchers trained 45 small
+            models from scratch for each configuration across different sparsity levels and D/N
+            ratios, totaling 495 distinct MoE models with varying sparsity, hyperparameters, and D/N
+            settings, to derive ground-truth Global Minimum Train Smepothed Loss values. Except for
+            one D/N = 1 experiment, Step Law predictions consistently fall within +0.5% of the
+            global minimum across all configurations, with most within +0.25%, robustly validating the
+            method. Detailed results are provided in the appendix.
           </figcaption>
         </figure>
       </div>
@@ -395,8 +424,15 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img5.png" alt="img5">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Configuration Space Analysis under Different Data Recipes.</strong>
-            Our method demonstrates stable convergence patterns across varying data compositions.
+            <strong style="font-weight: 900; color: #000;">Figure 5. Configuration Space Analysis under Different Data Recipes:</strong>
+            left panel shows bilingual data, center panel combines code and mathematical data, 
+            and right panel focuses on code-dominated data. 
+            Each configuration trained 45 models from scratch with identical settings except batch size and learning rate, 
+            totaling 135 models across three data distributions. The Global Minimum represents the ground-truth 
+            lowest Final Train Smoothed Loss obtained through grid search, while Step Law-predicted optimal 
+            batch sizes and learning rates consistently fall within +0.125% to 0.25% of the minimum loss across 
+            all data recipes.
+            <!-- Our method demonstrates stable convergence patterns across varying data compositions. -->
           </figcaption>
         </figure>
       </div>
