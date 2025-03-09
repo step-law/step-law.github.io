@@ -613,38 +613,51 @@
 </section>
 
 
-<section class="section" style="padding: 1.5rem 0;">
+<section class="section" style="padding: 2rem 0;">
   <div class="container is-max-desktop">
-    <div class="roadmap-card">
-      <!-- 表格 -->
-      <div class="dynamic-table">
+    <!-- 动态标题 -->
+    <div class="release-header has-text-centered mb-6">
+      <h2 class="title is-3 gradient-text">
+        Open Source Roadmap
+        <span class="pulsating-dot"></span>
+      </h2>
+      <p class="subtitle is-6 has-text-grey-light">Live Progress Tracking</p>
+    </div>
+
+    <!-- 卡片式表格容器 -->
+    <div class="roadmap-container">
+      <!-- 时间线 -->
+      <div class="timeline"></div>
+
+      <!-- 表格主体 -->
+      <div class="roadmap-table">
         <!-- 表头 -->
         <div class="table-header">
-          <div class="header-item">里程碑</div>
-          <div class="header-item">状态</div>
+          <div class="header-item">Milestone</div>
+          <div class="header-item">Release Status</div>
         </div>
 
         <!-- 数据行 -->
         <div class="table-row completed">
           <div class="table-cell">
-            <i class="fas fa-file-alt"></i>
-            Predictable Scale Part I：最优超参
+            <i class="fas fa-check-circle"></i>
+            Predictable Scale Part I
           </div>
           <div class="table-cell">
-            <span class="status-badge success">
-              <i class="fas fa-check"></i> 已公开（ArXiv）
+            <span class="tag is-success is-rounded">
+              <i class="fas fa-file-pdf"></i> ArXiv
             </span>
           </div>
         </div>
 
         <div class="table-row completed">
           <div class="table-cell">
-            <i class="fas fa-tools"></i>
+            <i class="fas fa-toolbox"></i>
             Optimal Hyperparameter Tool
           </div>
           <div class="table-cell">
-            <span class="status-badge success">
-              <i class="fas fa-check"></i> 已公开（项目主页）
+            <span class="tag is-info is-rounded">
+              <i class="fas fa-home"></i> Project Page
             </span>
           </div>
         </div>
@@ -652,166 +665,134 @@
         <div class="table-row in-progress">
           <div class="table-cell">
             <i class="fas fa-chart-line"></i>
-            3700个训练模型的Training Dynamics
+            3700 Models Training Dynamics
           </div>
           <div class="table-cell">
-            <span class="status-badge progress">
-              <i class="fas fa-sync"></i> 主体已开源（Wandb）
-            </span>
+            <div class="progress-container">
+              <progress class="progress is-small" value="80" max="100"></progress>
+              <span class="tag is-warning">
+                <i class="fab fa-wpexplorer"></i> Wandb
+              </span>
+            </div>
           </div>
         </div>
 
-        <div class="table-row in-progress">
-          <div class="table-cell">
-            <i class="fas fa-database"></i>
-            3700个模型的最终Train Smoothed Loss
-          </div>
-          <div class="table-cell">
-            <span class="status-badge progress">
-              <i class="fas fa-code-branch"></i> 项目主页/GitHub
-            </span>
-          </div>
-        </div>
+        <!-- 更多数据行... -->
 
         <div class="table-row upcoming">
           <div class="table-cell">
-            <i class="fas fa-box-open"></i>
-            3700个模型的Checkpoint
+            <i class="fas fa-flag-checkered"></i>
+            Predictable Scale Part V
           </div>
           <div class="table-cell">
-            <span class="status-badge upcoming">
+            <span class="release-date">
               <i class="fas fa-hourglass-half"></i>
-              <span class="date">2024-03-30</span>
-              <span class="countdown"></span>
+              2024.7.15
+              <span class="countdown">(98 days)</span>
             </span>
           </div>
         </div>
-
-        <!-- 更多行（根据需求复制修改） -->
-      
       </div>
     </div>
   </div>
 </section>
 
 <style>
-/* 明亮主题 */
-.roadmap-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  padding: 1.5rem;
-}
-
-/* 紧凑表格布局 */
-.dynamic-table {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.table-header {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 0.8rem 1rem;
-  background: rgba(255,255,255,0.9);
-  border-bottom: 2px solid #e9ecef;
-  font-weight: 600;
-  color: #495057;
-}
-
-.table-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  align-items: center;
-  padding: 0.8rem 1rem;
-  background: white;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  min-height: 48px;
-}
-
-.table-row:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-/* 状态标签 */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-}
-
-.success {
-  background: #d4edda;
-  color: #155724;
-}
-
-.progress {
-  background: #fff3cd;
-  color: #856404;
-}
-
-.upcoming {
-  background: #e2e3e5;
-  color: #383d41;
-}
-
-/* 图标优化 */
-.fas {
-  margin-right: 0.6rem;
-  font-size: 0.9em;
-}
-
-/* 实时倒计时 */
-.countdown {
-  margin-left: 0.8rem;
-  color: #6c757d;
-  font-size: 0.85em;
-}
-
-/* 响应式优化 */
-@media (max-width: 768px) {
-  .table-header, .table-row {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+  /* 修改后的明亮主题 */
+  .roadmap-container {
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(245, 245, 245, 0.98) 100%);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
-
-  .status-badge {
-    justify-content: center;
-  }
-}
-</style>
-
-<script>
-// 实时计算剩余天数
-function calculateCountdown() {
-  const targets = [
-    '2024-03-30',
-    '2024-04-15',
-    '2024-05-15',
-    '2024-06-15',
-    '2024-07-15'
-  ]
-
-  document.querySelectorAll('.countdown').forEach((el, index) => {
-    const targetDate = new Date(targets[index])
-    const today = new Date()
-    const diffTime = targetDate - today
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
   
-    el.innerHTML = `(${diffDays > 0 ? diffDays+'天' : '已发布'})`
-    if(diffDays <= 7) el.style.color = '#dc3545'
-  })
-}
-
-// 初始化计算
-calculateCountdown()
-// 每天更新
-setInterval(calculateCountdown, 86400000)
-</script>
+  /* 缩小整体尺寸 */
+  .release-header .title.is-3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .release-header .subtitle.is-6 {
+    font-size: 0.85rem;
+  }
+  
+  /* 紧凑表格布局 */
+  .roadmap-table {
+    gap: 1rem;
+  }
+  
+  .table-header {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.03);
+  }
+  
+  .table-row {
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  /* 调整状态颜色 */
+  .completed .table-cell:first-child {
+    color: #10b981;
+  }
+  
+  .in-progress .table-cell:first-child {
+    color: #f59e0b;
+  }
+  
+  .upcoming .table-cell:first-child {
+    color: #64748b;
+  }
+  
+  /* 缩小图标和标签 */
+  .fas, .fab {
+    font-size: 0.9em;
+    margin-right: 0.4rem;
+  }
+  
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+  }
+  
+  .progress {
+    height: 6px;
+  }
+  
+  /* 调整动态元素 */
+  .gradient-text {
+    background: linear-gradient(45deg, #3b82f6, #6366f1);
+  }
+  
+  .pulsating-dot {
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+  }
+  
+  /* 缩小悬停效果 */
+  .table-row:hover {
+    transform: translateX(5px);
+    background: linear-gradient(90deg, 
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 100%);
+  }
+  
+  @media (max-width: 768px) {
+    .roadmap-container {
+      padding: 1rem;
+    }
+  
+    .table-row {
+      padding: 0.75rem;
+    }
+  }
+  </style>
 
 
 
