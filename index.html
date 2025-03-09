@@ -613,51 +613,38 @@
 </section>
 
 
-<section class="section" style="padding: 2rem 0;">
+<section class="section" style="padding: 1.5rem 0;">
   <div class="container is-max-desktop">
-    <!-- 动态标题 -->
-    <div class="release-header has-text-centered mb-6">
-      <h2 class="title is-3 gradient-text">
-        Open Source Roadmap
-        <span class="pulsating-dot"></span>
-      </h2>
-      <p class="subtitle is-6 has-text-grey-light">Live Progress Tracking</p>
-    </div>
-
-    <!-- 卡片式表格容器 -->
-    <div class="roadmap-container">
-      <!-- 时间线 -->
-      <div class="timeline"></div>
-
-      <!-- 表格主体 -->
-      <div class="roadmap-table">
+    <div class="roadmap-card">
+      <!-- 表格 -->
+      <div class="dynamic-table">
         <!-- 表头 -->
         <div class="table-header">
-          <div class="header-item">Milestone</div>
-          <div class="header-item">Release Status</div>
+          <div class="header-item">里程碑</div>
+          <div class="header-item">状态</div>
         </div>
 
         <!-- 数据行 -->
         <div class="table-row completed">
           <div class="table-cell">
-            <i class="fas fa-check-circle"></i>
-            Predictable Scale Part I
+            <i class="fas fa-file-alt"></i>
+            Predictable Scale Part I：最优超参
           </div>
           <div class="table-cell">
-            <span class="tag is-success is-rounded">
-              <i class="fas fa-file-pdf"></i> ArXiv
+            <span class="status-badge success">
+              <i class="fas fa-check"></i> 已公开（ArXiv）
             </span>
           </div>
         </div>
 
         <div class="table-row completed">
           <div class="table-cell">
-            <i class="fas fa-toolbox"></i>
+            <i class="fas fa-tools"></i>
             Optimal Hyperparameter Tool
           </div>
           <div class="table-cell">
-            <span class="tag is-info is-rounded">
-              <i class="fas fa-home"></i> Project Page
+            <span class="status-badge success">
+              <i class="fas fa-check"></i> 已公开（项目主页）
             </span>
           </div>
         </div>
@@ -665,156 +652,166 @@
         <div class="table-row in-progress">
           <div class="table-cell">
             <i class="fas fa-chart-line"></i>
-            3700 Models Training Dynamics
+            3700个训练模型的Training Dynamics
           </div>
           <div class="table-cell">
-            <div class="progress-container">
-              <progress class="progress is-small" value="80" max="100"></progress>
-              <span class="tag is-warning">
-                <i class="fab fa-wpexplorer"></i> Wandb
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 更多数据行... -->
-
-        <div class="table-row upcoming">
-          <div class="table-cell">
-            <i class="fas fa-flag-checkered"></i>
-            Predictable Scale Part V
-          </div>
-          <div class="table-cell">
-            <span class="release-date">
-              <i class="fas fa-hourglass-half"></i>
-              2024.7.15
-              <span class="countdown">(98 days)</span>
+            <span class="status-badge progress">
+              <i class="fas fa-sync"></i> 主体已开源（Wandb）
             </span>
           </div>
         </div>
+
+        <div class="table-row in-progress">
+          <div class="table-cell">
+            <i class="fas fa-database"></i>
+            3700个模型的最终Train Smoothed Loss
+          </div>
+          <div class="table-cell">
+            <span class="status-badge progress">
+              <i class="fas fa-code-branch"></i> 项目主页/GitHub
+            </span>
+          </div>
+        </div>
+
+        <div class="table-row upcoming">
+          <div class="table-cell">
+            <i class="fas fa-box-open"></i>
+            3700个模型的Checkpoint
+          </div>
+          <div class="table-cell">
+            <span class="status-badge upcoming">
+              <i class="fas fa-hourglass-half"></i>
+              <span class="date">2024-03-30</span>
+              <span class="countdown"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 更多行（根据需求复制修改） -->
+      
       </div>
     </div>
   </div>
 </section>
 
 <style>
-/* 动态背景 */
-.roadmap-container {
-  background: linear-gradient(135deg, 
-    rgba(16, 24, 39, 0.95) 0%,
-    rgba(28, 42, 63, 0.9) 100%);
-  border-radius: 1.5rem;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow: hidden;
+/* 明亮主题 */
+.roadmap-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 1.5rem;
 }
 
-/* 动态标题 */
-.gradient-text {
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
-
-.pulsating-dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #00b4d8;
-  border-radius: 50%;
-  margin-left: 1rem;
-  animation: pulse 1.5s infinite;
-}
-
-/* 表格布局 */
-.roadmap-table {
+/* 紧凑表格布局 */
+.dynamic-table {
   display: grid;
-  gap: 1.5rem;
+  gap: 0.8rem;
 }
 
 .table-header {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.9);
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  color: #495057;
 }
 
 .table-row {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 1.5rem;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
-  position: relative;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-/* 交互效果 */
-.table-row:hover {
-  transform: translateX(10px);
-  background: linear-gradient(90deg, 
-    rgba(0, 180, 216, 0.1) 0%,
-    transparent 100%);
-}
-
-/* 状态指示器 */
-.completed .table-cell:first-child {
-  color: #90e0ef;
-}
-
-.in-progress .table-cell:first-child {
-  color: #ffd60a;
-}
-
-.upcoming .table-cell:first-child {
-  color: #adb5bd;
-}
-
-/* 进度条样式 */
-.progress-container {
-  display: flex;
   align-items: center;
-  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: white;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  min-height: 48px;
+}
+
+.table-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 状态标签 */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.success {
+  background: #d4edda;
+  color: #155724;
 }
 
 .progress {
-  flex-grow: 1;
-  height: 8px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #fff3cd;
+  color: #856404;
 }
 
-.progress::-webkit-progress-value {
-  background: linear-gradient(90deg, #ffd60a, #ffc300);
+.upcoming {
+  background: #e2e3e5;
+  color: #383d41;
 }
 
-/* 时间线动画 */
-@keyframes pulse {
-  0% { opacity: 0.6; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.1); }
-  100% { opacity: 0.6; transform: scale(0.9); }
+/* 图标优化 */
+.fas {
+  margin-right: 0.6rem;
+  font-size: 0.9em;
 }
 
-/* 响应式设计 */
+/* 实时倒计时 */
+.countdown {
+  margin-left: 0.8rem;
+  color: #6c757d;
+  font-size: 0.85em;
+}
+
+/* 响应式优化 */
 @media (max-width: 768px) {
-  .roadmap-table {
-    gap: 1rem;
-  }
-
-  .table-row {
+  .table-header, .table-row {
     grid-template-columns: 1fr;
-    padding: 1rem;
+    gap: 0.5rem;
   }
 
-  .table-cell {
-    padding: 0.5rem 0;
+  .status-badge {
+    justify-content: center;
   }
 }
 </style>
+
+<script>
+// 实时计算剩余天数
+function calculateCountdown() {
+  const targets = [
+    '2024-03-30',
+    '2024-04-15',
+    '2024-05-15',
+    '2024-06-15',
+    '2024-07-15'
+  ]
+
+  document.querySelectorAll('.countdown').forEach((el, index) => {
+    const targetDate = new Date(targets[index])
+    const today = new Date()
+    const diffTime = targetDate - today
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+  
+    el.innerHTML = `(${diffDays > 0 ? diffDays+'天' : '已发布'})`
+    if(diffDays <= 7) el.style.color = '#dc3545'
+  })
+}
+
+// 初始化计算
+calculateCountdown()
+// 每天更新
+setInterval(calculateCountdown, 86400000)
+</script>
 
 
 
