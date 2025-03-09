@@ -18,6 +18,7 @@ body {
 
 .publication-links {
   margin-top: 0.6rem;
+  margin-bottom: 0.1rem
 }
 
 .dnerf {
@@ -343,65 +344,3 @@ body {
   color: var(--link-color, #0066cc); /* 使用CSS变量 */
 }
 
-
-
-/* 全局section间距调整 */
-.section {
-  padding: 2rem 1.5rem !important; /* 减少默认padding */
-  margin-bottom: 1.5rem !important; /* 统一section底部间距 */
-}
-
-/* 容器间距压缩 */
-.container.is-max-desktop {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* 标题间距优化 */
-.title.is-3 {
-  margin-bottom: 0.75rem !important;
-}
-
-/* 图片说明文字间距 */
-figcaption {
-  margin-top: 0.5rem !important;
-  padding-top: 0.25rem;
-}
-
-/* 公式区块上下间距 */
-.formula-container {
-  margin: 0.5rem auto;
-}
-
-/* 内容块内部间距 */
-.content p {
-  margin-bottom: 0.75em;
-}
-
-/* Bulma组件间距覆盖 */
-.columns {
-  margin-top: -0.5rem;
-  margin-bottom: -0.5rem !important;
-}
-
-.column {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-}
-
-/* 按钮链接间距 */
-.publication-links {
-  margin-top: 1rem !important;
-}
-
-/* 响应式微调 */
-@media screen and (max-width: 768px) {
-  .section {
-    padding: 1.5rem 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .title.is-3 {
-    margin-bottom: 0.5rem !important;
-  }
-}
