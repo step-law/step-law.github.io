@@ -698,101 +698,124 @@
 </section>
 
 <style>
-  /* 修改后的明亮主题 */
-  .roadmap-container {
-    background: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(245, 245, 245, 0.98) 100%);
-    border-radius: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  /* 缩小整体尺寸 */
-  .release-header .title.is-3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .release-header .subtitle.is-6 {
-    font-size: 0.85rem;
-  }
-  
-  /* 紧凑表格布局 */
+/* 动态背景 */
+.roadmap-container {
+  background: linear-gradient(135deg, 
+    rgba(245, 245, 245, 0.95) 0%,
+    rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 动态标题 */
+.gradient-text {
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.pulsating-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #00b4d8;
+  border-radius: 50%;
+  margin-left: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+/* 表格布局 */
+.roadmap-table {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 交互效果 */
+.table-row:hover {
+  transform: translateX(10px);
+  background: linear-gradient(90deg, 
+    rgba(0, 180, 216, 0.1) 0%,
+    transparent 100%);
+}
+
+/* 状态指示器 */
+.completed .table-cell:first-child {
+  color: #90e0ef;
+}
+
+.in-progress .table-cell:first-child {
+  color: #ffd60a;
+}
+
+.upcoming .table-cell:first-child {
+  color: #adb5bd;
+}
+
+/* 进度条样式 */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress {
+  flex-grow: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #ffd60a, #ffc300);
+}
+
+/* 时间线动画 */
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.6; transform: scale(0.9); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
   .roadmap-table {
     gap: 1rem;
   }
-  
-  .table-header {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-    background: rgba(0, 0, 0, 0.03);
-  }
-  
+
   .table-row {
+    grid-template-columns: 1fr;
     padding: 1rem;
-    font-size: 0.9rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
   }
-  
-  /* 调整状态颜色 */
-  .completed .table-cell:first-child {
-    color: #10b981;
+
+  .table-cell {
+    padding: 0.5rem 0;
   }
-  
-  .in-progress .table-cell:first-child {
-    color: #f59e0b;
-  }
-  
-  .upcoming .table-cell:first-child {
-    color: #64748b;
-  }
-  
-  /* 缩小图标和标签 */
-  .fas, .fab {
-    font-size: 0.9em;
-    margin-right: 0.4rem;
-  }
-  
-  .tag {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.75rem;
-  }
-  
-  .progress {
-    height: 6px;
-  }
-  
-  /* 调整动态元素 */
-  .gradient-text {
-    background: linear-gradient(45deg, #3b82f6, #6366f1);
-  }
-  
-  .pulsating-dot {
-    width: 8px;
-    height: 8px;
-    background: #3b82f6;
-  }
-  
-  /* 缩小悬停效果 */
-  .table-row:hover {
-    transform: translateX(5px);
-    background: linear-gradient(90deg, 
-      rgba(59, 130, 246, 0.08) 0%,
-      transparent 100%);
-  }
-  
-  @media (max-width: 768px) {
-    .roadmap-container {
-      padding: 1rem;
-    }
-  
-    .table-row {
-      padding: 0.75rem;
-    }
-  }
-  </style>
+}
+</style>
 
 
 
