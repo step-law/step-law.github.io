@@ -211,9 +211,15 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img1.png" alt="img1">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Figure 1. The hyperparameter space for models with 400M parameters trained on 40B tokens (left) and 1B parameters 
-            trained on 100B tokens (right).</strong> Optimal points represent the lowest training loss for each learning rate and 
-            batch size pair, while contour lines depict the relative loss differences from these optima.
+            <strong style="font-weight: 900; color: #000;">Figure 1. The hyperparameter space for models 
+            with 400M parameters trained on 40B tokens (left) and 1B parameters trained on 100B tokens (right).</strong>
+            All contour lines shown here represent the genuinely converged Train Smooth Loss obtained from small models 
+            trained from scratch. The contour lines in the two figures respectively originate from two groups 
+            totaling 240 small models with different hyperparameters (Grid Search) trained end-to-end. 
+            The Global Minimum is derived from the 120 small models as the one with the minimal final Train Smooth Loss. 
+            The contour lines illustrate the relative distance from the Global Minimum in terms of the final loss. 
+            Data points exceeding +2% are excluded from the visualization. 
+            All mentioned methods have been converted to predict OptimalToken-Wise BatchSize.
           </figcaption>
         </figure>
       </div>
