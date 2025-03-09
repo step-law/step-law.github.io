@@ -375,8 +375,8 @@ function initVisualization() {
       const { batchSize, learningRate } = calculateBsLr(modelSize, trainingTokens);
     
     // 显示结果
-    document.getElementById('bsValue').textContent = `BS: ${formatLargeNumber(batchSize)}`;
-    document.getElementById('lrValue').textContent = `LR: ${formatSmallNumber(learningRate)}`;
+    document.getElementById('bsValue').textContent = `Optimal Token Wise BatchSize: ${formatLargeNumber(batchSize)}`;
+    document.getElementById('lrValue').textContent = `Learning Rate: ${formatSmallNumber(learningRate)}`;
   });
   
   function calculateBsLr(modelSize, trainingTokens) {
