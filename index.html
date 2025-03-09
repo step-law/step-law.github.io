@@ -550,7 +550,7 @@
 
 
 <!-- 工具 -->
-<section class="section" style="margin: 0 rem 0 !important; padding: 0.2rem 0.2rem !important;">
+<section class="section" style="margin: 0 !important; padding: 0.2rem 0.2rem !important;">
   
   <div class="container is-max-desktop">
     <h2 class="title is-3 elegant-title" id="steplawtool">Step Law Tools</h2>
@@ -611,6 +611,210 @@
     </div>
   </div>
 </section>
+
+
+<section class="section" style="padding: 2rem 0;">
+  <div class="container is-max-desktop">
+    <!-- 动态标题 -->
+    <div class="release-header has-text-centered mb-6">
+      <h2 class="title is-3 gradient-text">
+        Open Source Roadmap
+        <span class="pulsating-dot"></span>
+      </h2>
+      <p class="subtitle is-6 has-text-grey-light">Live Progress Tracking</p>
+    </div>
+
+    <!-- 卡片式表格容器 -->
+    <div class="roadmap-container">
+      <!-- 时间线 -->
+      <div class="timeline"></div>
+
+      <!-- 表格主体 -->
+      <div class="roadmap-table">
+        <!-- 表头 -->
+        <div class="table-header">
+          <div class="header-item">Milestone</div>
+          <div class="header-item">Release Status</div>
+        </div>
+
+        <!-- 数据行 -->
+        <div class="table-row completed">
+          <div class="table-cell">
+            <i class="fas fa-check-circle"></i>
+            Predictable Scale Part I
+          </div>
+          <div class="table-cell">
+            <span class="tag is-success is-rounded">
+              <i class="fas fa-file-pdf"></i> ArXiv
+            </span>
+          </div>
+        </div>
+
+        <div class="table-row completed">
+          <div class="table-cell">
+            <i class="fas fa-toolbox"></i>
+            Optimal Hyperparameter Tool
+          </div>
+          <div class="table-cell">
+            <span class="tag is-info is-rounded">
+              <i class="fas fa-home"></i> Project Page
+            </span>
+          </div>
+        </div>
+
+        <div class="table-row in-progress">
+          <div class="table-cell">
+            <i class="fas fa-chart-line"></i>
+            3700 Models Training Dynamics
+          </div>
+          <div class="table-cell">
+            <div class="progress-container">
+              <progress class="progress is-small" value="80" max="100"></progress>
+              <span class="tag is-warning">
+                <i class="fab fa-wpexplorer"></i> Wandb
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 更多数据行... -->
+
+        <div class="table-row upcoming">
+          <div class="table-cell">
+            <i class="fas fa-flag-checkered"></i>
+            Predictable Scale Part V
+          </div>
+          <div class="table-cell">
+            <span class="release-date">
+              <i class="fas fa-hourglass-half"></i>
+              2024.7.15
+              <span class="countdown">(98 days)</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 动态背景 */
+.roadmap-container {
+  background: linear-gradient(135deg, 
+    rgba(16, 24, 39, 0.95) 0%,
+    rgba(28, 42, 63, 0.9) 100%);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 动态标题 */
+.gradient-text {
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.pulsating-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #00b4d8;
+  border-radius: 50%;
+  margin-left: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+/* 表格布局 */
+.roadmap-table {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.5rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* 交互效果 */
+.table-row:hover {
+  transform: translateX(10px);
+  background: linear-gradient(90deg, 
+    rgba(0, 180, 216, 0.1) 0%,
+    transparent 100%);
+}
+
+/* 状态指示器 */
+.completed .table-cell:first-child {
+  color: #90e0ef;
+}
+
+.in-progress .table-cell:first-child {
+  color: #ffd60a;
+}
+
+.upcoming .table-cell:first-child {
+  color: #adb5bd;
+}
+
+/* 进度条样式 */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress {
+  flex-grow: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #ffd60a, #ffc300);
+}
+
+/* 时间线动画 */
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0.6; transform: scale(0.9); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .roadmap-table {
+    gap: 1rem;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .table-cell {
+    padding: 0.5rem 0;
+  }
+}
+</style>
 
 
 
