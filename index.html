@@ -398,7 +398,7 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img3.png" alt="img3">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Figure3. Topological Invariance Across Varied Model Shape.</strong>
+            <strong style="font-weight: 900; color: #000;">Figure 3. Topological Invariance Across Varied Model Shape.</strong>
             This figure demonstrates the topological invariance of optimal hyperparameters across 
             different model shapes under fixed non-vocabulary parameter counts and training token budgets. 
             Researchers systematically varied model architectures by adjusting layer counts (14/10/8 layers from left to right), 
@@ -464,7 +464,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img5.png" alt="img5">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 5. Configuration Space Analysis under Different Data Recipes:</strong>
             left panel shows bilingual data, center panel combines code and mathematical data, 
             and right panel focuses on code-dominated data. 
@@ -495,17 +495,21 @@
         <figure class="image mb-5"> 
           <img src="./static/images/img6.png" alt="img6">
           <figcaption class="mt-2" style="color: #333">
-            <strong style="font-weight: 900; color: #000;">Comparison of learning rate schedules.</strong> These contour
+            <strong style="font-weight: 900; color: #000;">Figure 6. Comparison of learning rate schedules.</strong> These contour
             plots illustrate two distinct learning rate schedules. <strong style="font-weight: 900; color: #000;">Blue
             contours</strong> represent the <i>conventional decay schedule</i>, where the
             minimum learning rate min_lr is set to one-tenth of the maximum
             learning rate max_lr/10. <strong style="font-weight: 900; color: #000;">Red contours</strong> depict our
             proposed <i>final learning rate schedule</i>, with a constant
-            minimum learning rate of min_lr = 10<sup>-5</sup>. The visualization reveals
-            that the conventional decay method leads to a discernible <strong style="font-weight: 900; color: #000;">leftward
-            bias</strong> in the optimal learning rate range, indicated by the shift of the lowest
-            loss region towards lower learning rates in the blue contours compared to
-            the red.
+            minimum learning rate of min_lr = 10<sup>-5</sup>. 
+            All the contours present results from grid searches conducted over identical batch size/learning rate ranges 
+            using 120 independently trained models each. The red and blue Global Minimum markers denote ground-truth 
+            minimal Final Train Smoothed Loss values in their respective configurations. When switching to max_lr/10 settings, 
+            the blue markers shift <strong style="font-weight: 900; color: #000;">
+            leftward (toward smaller learning rates) and upward (toward larger batch sizes) </strong>
+            in the parameter space. Absolute value comparisons reveal models with min_lr=1e-5 consistently 
+            achieve lower converged losses than those using max_lr/10 configurations. All ground-truth values 
+            corresponding to these experiments will be progressively open-sourced.
           </figcaption>
         </figure>
       </div>
@@ -529,10 +533,12 @@
           <img src="./static/images/img7.png" alt="img7">
           <figcaption class="mt-2" style="color: #333">
             <strong style="font-weight: 900; color: #000;">
-            <p>(a) Scatter points indicate empirical optimal learning rate vs. batch size for model scale N;</p>
-            <p>(b) Analogous results for dataset scale D.</p>
+            <p>Figure 7. (a) Scatter points indicate empirical optimal learning rate vs. batch size for model scale N; (b) Analogous results for dataset scale D.</p>
             </strong>
             Curves show our hp-scaling law predictions, with shaded regions representing parameter uncertainty bounds from the sampling-based fitting strategy.
+            Each data point in the figures represents between 45 and 120 independently trained models with distinct hyperparameters. 
+            Every plotted position corresponds to the optimal hyperparameter configuration (Optimal Learning Rate and Optimal Batch Size) 
+            identified through grid search under varying model sizes and data scales. 
             Both plots use double logarithmic scaling (1912 training samples).
           </figcaption>
         </figure>
