@@ -210,7 +210,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img1.png" alt="img1">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 1. The hyperparameter space for models 
             with 400M parameters trained on 40B tokens (left) and 1B parameters trained on 100B tokens (right).</strong>
             All contour lines shown here represent the genuinely converged Train Smooth Loss obtained from small models 
@@ -354,7 +354,7 @@
     <div class="content-header mb-4">
       <div class="column is-full-width">
         <p class="subtitle is-6 has-text-grey-dark has-text-left" 
-           style="line-height: 1.5; font-size: 1rem;">
+           style="line-height: 1.5; font-size: 1.05rem;">
           We discover and demonstrate the convexity property of the loss landscape under fixed parameter count 
           and data size conditions. This provides fundamental insights into hyperparameter optimization.
         </p>
@@ -364,7 +364,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img2.png" alt="img2">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 2. Learning Rate vs. Batch Size Loss Landscape Analysis 
             for 1B Model (Trained on 100B Tokens) combining empirical scatter data (left) and reconstructed 3D surfaces (right):</strong> 
 
@@ -386,7 +386,7 @@
     <div class="content-header mb-4">
       <div class="column is-full-width">
         <p class="subtitle is-6 has-text-grey-dark has-text-left" 
-           style="line-height: 1.5; font-size: 1rem;">
+           style="line-height: 1.5; font-size: 1.05rem;">
            We conduct a comprehensive investigation into how different model architectures 
            (specifically varying combinations of width and depth dimensions) influence scaling laws. 
            Our findings demonstrate that Step Law exhibits a high degree of stability across all architectural configurations.
@@ -397,7 +397,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img3.png" alt="img3">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 3. Topological Invariance Across Varied Model Shape.</strong>
             This figure demonstrates the topological invariance of optimal hyperparameters across 
             different model shapes under fixed non-vocabulary parameter counts and training token budgets. 
@@ -417,7 +417,7 @@
     <div class="content-header mb-4">
       <div class="column is-full-width">
         <p class="subtitle is-6 has-text-grey-dark has-text-left" 
-           style="line-height: 1.5; font-size: 1rem;">
+           style="line-height: 1.5; font-size: 1.05rem;">
            Besides, our research findings reveal that this scaling law not only applies to dense models 
            but also generalizes effectively to MoE models with varying sparsity levels, 
            demonstrating robust generalization capabilities.
@@ -428,7 +428,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5">
           <img src="./static/images/img4.png" alt="img4">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 4. Validation loss landscapes of MoE models under varying sparsity ratios N<sub>a</sub>/N.</strong>
             <!-- Left: Low sparsity N<sub>a</sub>/N=0.27. Middle: Medium sparsity N<sub>a</sub>/N=0.58. 
             Right: Medium sparsity at D=8.0B. 
@@ -483,7 +483,7 @@
     <div class="content-header mb-4">
       <div class="column is-full-width">
         <p class="subtitle is-6 has-text-grey-dark has-text-left" 
-           style="line-height: 1.5; font-size: 1rem;">
+           style="line-height: 1.5; font-size: 1.05rem;">
            Our comparative analysis reveals that learning rate scheduling strategies significantly 
            impact optimal hyperparameter selection. The experiment further uncovers critical distinctions 
            between traditional learning rate decay and fixed minimum learning rate schemes.
@@ -494,7 +494,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img6.png" alt="img6">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">Figure 6. Comparison of learning rate schedules.</strong> These contour
             plots illustrate two distinct learning rate schedules. <strong style="font-weight: 900; color: #000;">Blue
             contours</strong> represent the <i>conventional decay schedule</i>, where the
@@ -519,7 +519,7 @@
     <div class="content-header mb-4">
       <div class="column is-full-width">
         <p class="subtitle is-6 has-text-grey-dark has-text-left" 
-           style="line-height: 1.5; font-size: 1rem;">
+           style="line-height: 1.5; font-size: 1.05rem;">
            Through logarithmic transformation of power-law relationships into linear forms, 
            parameters are fitted via the least squares method, with robustness enhanced through bootstrap sampling. 
            We provide a precise predictive formula, establishing a theoretical foundation for 
@@ -531,7 +531,7 @@
       <div class="column is-full-width">
         <figure class="image mb-5"> 
           <img src="./static/images/img7.png" alt="img7">
-          <figcaption class="mt-2" style="color: #333">
+          <figcaption class="mt-2" style="color: #333; font-size: 0.875rem; line-height: 1.4">
             <strong style="font-weight: 900; color: #000;">
             <p>Figure 7. (a) Scatter points indicate empirical optimal learning rate vs. batch size for model scale N; (b) Analogous results for dataset scale D.</p>
             </strong>
