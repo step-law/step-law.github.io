@@ -380,25 +380,25 @@ function initVisualization() {
   });
   
   function calculateBsLr(modelSize, trainingTokens) {
-      /**
-       * 公式：
-       * log(bs) = 2.187 - 0.1636*ln(modelSize) + 0.592*ln(trainingTokens)
-       * log(lr) = 0.5863 - 0.7129*ln(modelSize) + 0.3075*ln(trainingTokens)
-       */
-      const logBs = 2.187 
-          - 0.1636 * Math.log(modelSize) 
-          + 0.592 * Math.log(trainingTokens);
-      
-      const logLr = 0.5863 
-          - 0.7129 * Math.log(modelSize) 
-          + 0.3075 * Math.log(trainingTokens);
-  
-      return {
-          batchSize: Math.exp(logBs),
-          learningRate: Math.exp(logLr)
-      };
+    /**
+     * 公式：
+     * log(bs) = log(0.58) + 0.571*ln(trainingTokens)
+     * log(lr) = log(1.79) - 0.713*ln(modelSize) + 0.307*ln(trainingTokens)
+     */
+    const logBs = Math.log(0.58) 
+        + 0.571 * Math.log(trainingTokens);
+
+    const logLr = Math.log(1.79) 
+        - 0.713 * Math.log(modelSize) 
+        + 0.307 * Math.log(trainingTokens);
+
+    return {
+        batchSize: Math.exp(logBs),
+        learningRate: Math.exp(logLr)
+    };
   }
-  
+
+
   // 数字格式化
   function formatLargeNumber(num) {
     if (num >= 1e6) {
